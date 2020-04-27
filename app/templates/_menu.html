@@ -1,0 +1,12 @@
+<div class="top-menu-box">
+    {% if current_user.is_anonymous %}
+    <a href="{{ url_for('login') }}">Войти</a>
+    {% else %}
+    <a href="{{ url_for('index') }}" class="active">Пульт</a>
+    <a href="{{ url_for('shedul') }}">Расписание</a>
+    <a href="#">Статитика</a>
+    <a href="#">Инструкции</a>
+    <a href="{{ url_for('user', username=current_user.username) }}">Профиль</a> |
+    <a href="{{ url_for('logout') }}">Выйти</a>
+    {% endif %}
+</div>

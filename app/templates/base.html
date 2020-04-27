@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    {% block head %}{% endblock %}
+
+      {% if title %}
+      <title>{{ title }} | ETV </title>
+      {% else %}
+      <title>ETV</title>
+      {% endif %}
+    </head>
+    <body>
+        <div class="top">
+            <div class="top-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 etv-logo">
+                            <img src="{{ url_for('static', filename='img/etv.png') }}" class="etv-logo" width="120">
+                        </div>
+                        <div class="col-md-9">
+                            {% include "_menu.html" %}
+                            {% include "_stat.html" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <div class="container content-box">
+            <div class="row">
+                <div class="col-md-12">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

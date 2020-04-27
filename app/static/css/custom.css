@@ -1,0 +1,152 @@
+body {
+    background: rgba(0, 0, 0, .10);
+}
+
+body.face-box {
+    background: #244377;
+}
+
+.face {
+    min-height: 1000px;
+    background: url("/static/img/bg-auth.jpg") center center no-repeat;
+    color: #FFF;
+}
+
+.face .top-menu {
+    width: 100%;
+    text-align: right;
+    min-height: 200px;
+}
+
+.face .top-menu a {
+    display: inline-block;
+    margin: 60px 15px 0 15px;
+    padding: 5px 10px;
+}
+
+.face .top-menu a {
+    color: #FFF;
+}
+
+.face .face-err-box {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 80px;
+    background: #b21f2d;
+    border-radius: 4px;
+    color: #FFF;
+    text-align: center;
+}
+
+.face .face-err-box li {;
+}
+
+.face img.etv-logo {
+    margin-top: 30px;
+}
+
+.etv-logo {text-align: center}
+
+.etv-logo img.etv-logo {
+    margin: 20px auto 0 auto;
+}
+
+.login-box {
+    text-align: right;
+}
+
+.login-box input[type=text],
+.login-box input[type=password] {
+    width: 90%;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
+}
+
+.login-box input[type=submit] {
+    padding: 5px 40px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    background: #ff8500;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
+}
+
+.top-box {
+    width: 94%;
+    min-height: 200px;
+    border-radius: 0 0 50px 50px;
+    background: url("/static/img/consol-top.jpg") bottom center no-repeat;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.top-menu-box {
+    width: 100%;
+    text-align:center;
+    border-bottom: 1px solid rgba(255,225,225, .3);
+}
+
+.top-menu-box a {
+    color: #FFF;
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 20px 15px 15px 15px;
+}
+
+.top-menu-box a.active {
+    color:#ff8500;
+}
+
+.content-box {
+    background: rgba(255,255,255,.6);
+    min-height: 1000px;
+    border: 1px solid #CCC;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px 15px;
+}
+
+.hello-box {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.stat-box p{
+    display: block;
+    color: #FFF;
+}
+.stat-box span {
+    display: block;
+    color: #ff8500;
+}
+
+
+.office-table-box {
+    width: 100%;
+    text-align: center;
+}
+
+.office-table-box tr td {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.office-table-box tr:nth-child(odd) {
+    background: rgba(255,255,255,.5);
+}
+
+.office-table-box tr:nth-child(even) {
+    background: rgba(0,0,0,.05);
+}
+
+.office-table-box input[type=text] {
+    width: 95%;
+    text-indent: 15px;
+}

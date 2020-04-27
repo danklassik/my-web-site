@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    {% block head %}{% endblock %}
+
+      {% if title %}
+      <title>{{ title }} | makeITeasy </title>
+      {% else %}
+      <title>makeITeasy</title>
+      {% endif %}
+    </head>
+    <body class="face-box">
+    <div class="face">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="face-err-box">
+                        {% for message in messages %}
+                        <span>{{ message }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="col-md-6">
+                    <div class="top-menu"><a href="#">Статистика</a><a href="#">Инструкции</a><a href="{{ url_for('register') }}">Получить доступ</a></div>
+                </div>
+                <div class="col-md-2">
+                    <img src="{{ url_for('static', filename='img/etv.png') }}" class="etv-logo">
+                </div>
+                <div class="col-md-4">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='img/tv.png') }}" width="100%">
+                 </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
